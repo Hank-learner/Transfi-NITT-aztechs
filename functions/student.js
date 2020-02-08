@@ -2,31 +2,31 @@ const functions = require("firebase-functions");
 const config = require("./config.js");
 const db = config.db;
 const jwt = require("jsonwebtoken");
-const jwtCheck= require("./middleware.js")
+const middleware = require("./middleware.js")
 
-exports.sub_percentage= functions.https.onRequest(async(req, res) =>{
-    return jwtCheck(req, res, async()=>{
+// to get details of students
+exports.student_details = functions.https.onRequest(async(req, res) =>{
+    // return middleware.jwtCheck(req, res, async () => {
         try {
-            const roll_no= req.body.roll_no;
+            const roll_no= req.query.roll_no;
             ref=await db.ref(`/Students/${roll_no}/subjects`);
             let snapshot = await ref.once(`value`);
-            if(snapshot.val())
-               res.status(200).json({data: snapshot.val()});
+            if(snapshot)
+               res.status(200).json(snapshot);
               
             else
-                res.status(400).json({"response code":-3, message:"invalid roll_no"})
+                res.status(400).send("invalid roll_no");
                 
             }
         catch(err){
             console.log(err);
             return res.status(500).send("Internal server error");
         }
-    })
+    // })
 })
 
-
 exports.message_to_prof = functions.https.onRequest(async(req, res)=>{
-    return jwtCheck(req, res, async()=>{
+    // return middleware.jwtCheck(req, res, async () => {
       try{  
         const roll_no= req.body.roll_no;
         const sub= req.body.subject;
@@ -53,7 +53,7 @@ exports.message_to_prof = functions.https.onRequest(async(req, res)=>{
 
     }              
   
-    })
+    // })
 })
 
 

@@ -1,15 +1,14 @@
 const functions = require("firebase-functions");
 const config = require("./config.js");
 const db = config.db;
+const middleware = require("./middleware.js");
 
 exports.attendance_today = functions.https.onRequest(async (req, res) => {
-    return jwtCheck(req, res, async() => {
+    // return middleware.jwtCheck(req, res, async () => {
         try {
             let rollno = req.query.rollno;
             let ref = await db.ref(`/Students/${rollno}/subjects`);
             let snapshot = await ref.once("value");
-            let present = [];
-            let absent = [];
             let subjects = [];
             let attendance = {};
             let date = Date().slice(0, 15);
@@ -36,5 +35,5 @@ exports.attendance_today = functions.https.onRequest(async (req, res) => {
             console.log(err);
             res.status(500).send("Internal Server Error");
         }
-    })
+    // })
 })
