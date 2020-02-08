@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance manager</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/prof_attendance.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            Attendance manager
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="prof_record.html" class="nav-item nav-link">Record</a>
+                <a href="prof_attendance.html" class="nav-item nav-link  active">Attendance</a>
+                <a href="prof_timetable.html" class="nav-item nav-link">Timetable</a>
+                <a href="prof_message.html" class="nav-item nav-link">Message</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="prof_login.html" class="nav-item nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container page-container padding">
+        <br>
+        <br>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select course
+            </a>
+
+            <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#" value="XXPC 23">XXPC 23</a>
+                <a class="dropdown-item" href="#" value="XXPE 29">XXPE 29</a>
+                <a class="dropdown-item" href="#" value="XXOE 67">XXOE 67</a>
+                <a class="dropdown-item" href="#" value="XXOE 68">XXOE 68</a>
+                <a class="dropdown-item" href="#" value="XXMI 98">XXMI 98</a>
+            </div>
+        </div>
+        <br>
+        <p>Select your course to list</p>
+    </div>
+    <div class="container">
+        <div id="sel_sub_disp"></div>
+        <div class="camera">
+            <video id="video">Video stream not available.</video>
+            <button id="startbutton">Take photo</button>
+        </div>
+        <canvas id="canvas">
+        </canvas>
+        <div class="output">
+            <img id="photo" alt="The screen capture will appear in this box.">
+        </div>
+        <button id="confirm-send">Confirm send</button>
+        <div id="message-confirm"></div>
+    </div>
+    <script src="js/prof_attendance.js"></script>
+</body>
+
+</html>

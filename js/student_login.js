@@ -4,6 +4,10 @@ $(document).ready(function(){
         $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
     });
 
+    var useroll=localStorage.getItem("att_user_stu_roll");
+    if(useroll!="" && useroll)
+        window.location = "student_report.html";
+
 
     $("#register-button").click(function(){
         console.log("reg");
@@ -11,8 +15,6 @@ $(document).ready(function(){
         var password = $("#register-password").val().trim();
         var email = $("#register-email").val().trim();
         if( username != "" && password != "" && email != "" ){
-        console.log(username,password,email);
-
             $.ajax({
                 url:'',
                 type:'post',
@@ -40,16 +42,15 @@ $(document).ready(function(){
         var username = $("#login-username").val().trim();
         var password = $("#login-password").val().trim();
         if( username != "" && password != "" ){
-        console.log(username,password);
-
             $.ajax({
-                url:'',
+                url:'http://localhost:5001/aztech-e3e7f/us-central1/studentLogin',
                 type:'post',
-                data:{username:username,password:password},
+                data:{rollno:username,password:password},
                 success:function(response){
                     var msg = "";
                     if(response == 1){
                         msg="<div class='alert alert-success alert-dismissible fade show' role='alert'><strong>Logging in</strong></div>";
+                        localStorage.setItem("att_user_stu_roll",username);
                         window.location = "student_report.html";
                     }else{
                         msg="<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Invalid user credentials</strong></div>";
