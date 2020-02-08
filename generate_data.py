@@ -36,12 +36,12 @@ while True:
     # loop over the face detections and draw them on the frame
     for (x, y, w, h) in rects:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-    cv2.imshow("Frame", frame)
-    key = cv2.waitKey(1) & 0xFF
+        cv2.imshow("Frame", frame)
+        key = cv2.waitKey(1) & 0xFF
 
     # if the `k` key was pressed, write the *original* frame to disk
     # so we can later process it and use it for face recognition
-    if key == ord("k"):
+    if True:
         p = os.path.sep.join([args["output"], "{}.png".format(
             str(total).zfill(5))])
         cv2.imwrite(p, orig)
