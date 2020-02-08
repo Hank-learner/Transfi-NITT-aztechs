@@ -11,7 +11,7 @@ exports.studentLogin = functions.https.onRequest(async (req, res) => {
         let { rollno, password } = req.body;
         const ref = await db.ref(`/Students/${rollno}`);
         const snapshot = await ref.once("value");
-        let pass = snapshot.val()["password"];
+        let pass = snapshot.child("password").val();
         if(pass == password) {
             let token = jwt.sign(
                 { rollno: rollno },
@@ -36,7 +36,7 @@ exports.profLogin = functions.https.onRequest(async (req, res) => {
         let { rollno, password } = req.body;
         const ref = await db.ref(`/Professors/${rollno}`);
         const snapshot = await ref.once("value");
-        let pass = snapshot.val()["password"];
+        let pass = snapshot.child("password").val();
         if(pass == password) {
             let token = jwt.sign(
                 { rollno: rollno },
