@@ -3,9 +3,6 @@ const config = require("./config.js");
 const db = config.db;
 const middleware = require("./middleware.js");
 const fs = require("fs");
-const cors = require('cors')({
-    origin: true
-});
 const base64ToImage = require('base64-to-image');
 const path = "../output/rollno_list.txt";
 
@@ -13,7 +10,6 @@ const path = "../output/rollno_list.txt";
 exports.update_attendance = functions.https.onRequest(async (req, res) => {
     // return middleware.jwtCheck(req, res, async () => {
         try {
-            return cors(req, res, async () => {
                 if(fs.existsSync(path)) fs.unlinkSync(path);
                 
                 let base64str = req.body.image;
@@ -92,7 +88,6 @@ exports.update_attendance = functions.https.onRequest(async (req, res) => {
                     })
                 )
                 res.status(200).send("Updated");
-            });
         } catch (err) {
             console.log(err);
             res.status(500).send("Internal Server Error");

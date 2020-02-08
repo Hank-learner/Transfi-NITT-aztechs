@@ -206,3 +206,56 @@
 [info] ✔  functions[view_professor_timetable]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/view_professor_timetable).
 [info] ✔  functions[logoutProf]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/logoutProf).
 [debug] [2020-02-08T19:10:21.117Z] [worker-~diagnostic~-be898138-cbc2-4b16-a521-390d008e5abb]: IDLE
+[debug] [2020-02-08T19:28:19.246Z] ----------------------------------------------------------------------
+[debug] [2020-02-08T19:28:19.248Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2020-02-08T19:28:19.248Z] CLI Version:   7.3.2
+[debug] [2020-02-08T19:28:19.248Z] Platform:      linux
+[debug] [2020-02-08T19:28:19.248Z] Node Version:  v12.4.0
+[debug] [2020-02-08T19:28:19.248Z] Time:          Sun Feb 09 2020 00:58:19 GMT+0530 (India Standard Time)
+[debug] [2020-02-08T19:28:19.248Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-02-08T19:28:19.252Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-08T19:28:19.252Z] > authorizing via signed-in user
+[debug] [2020-02-08T19:28:19.252Z] [iam] checking project aztech-e3e7f for permissions ["firebase.projects.get"]
+[debug] [2020-02-08T19:28:19.253Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-08T19:28:19.254Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-08T19:28:19.550Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-08T19:28:19.621Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/aztech-e3e7f:testIamPermissions  
+
+[debug] [2020-02-08T19:28:21.265Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-08T19:28:21.269Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f  
+ 
+[debug] [2020-02-08T19:28:22.065Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/smrithi/sih/Transfi-NITT-aztechs'...
+[info] 
+[debug] [2020-02-08T19:28:22.070Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-02-08T19:28:23.296Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/smrithi/sih/Transfi-NITT-aztechs/functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-02-08T19:28:23.580Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/smrithi/sih/Transfi-NITT-aztechs/functions","node_version":"12.4.0"}
+[debug] [2020-02-08T19:28:23.580Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-02-08T19:28:23.583Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/smrithi/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-08T19:28:23.584Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/smrithi/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T19:28:23.584Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/smrithi/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Cannot find module 'base64-to-image'
+Require stack:
+- /home/smrithi/sih/Transfi-NITT-aztechs/functions/update_attendance.js
+- /home/smrithi/sih/Transfi-NITT-aztechs/functions/index.js
+- /usr/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:623:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:527:27)
+    at Module.require (internal/modules/cjs/loader.js:681:19)
+    at require (internal/modules/cjs/helpers.js:16:16)
+    at Object.<anonymous> (/home/smrithi/sih/Transfi-NITT-aztechs/functions/update_attendance.js:6:23)
+    at Module._compile (internal/modules/cjs/loader.js:774:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)
+    at Module.load (internal/modules/cjs/loader.js:641:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:556:12)
+    at Module.require (internal/modules/cjs/loader.js:681:19)
+[warn] ⚠  We were unable to load your functions code. (see above)

@@ -2,15 +2,11 @@ const functions = require("firebase-functions");
 const config = require("./config.js");
 const db = config.db;
 const jwt = require("jsonwebtoken");
-const jwtCheck= require("./middleware.js")
-const cors = require('cors')({
-   origin: true
-});
+const jwtCheck= require("./middleware.js");
 
 exports.updateproxy= functions.https.onRequest(async (req, res)=>{
 //   return jwtCheck(req, res, async ()=>{
      try {
-      return cors(req, res, async () => {
         const sub = req.body.sub;
         const roll_no = req.body.roll_no;
         const date = req.body.date;
@@ -36,8 +32,6 @@ exports.updateproxy= functions.https.onRequest(async (req, res)=>{
         {
             res.status(400).send("student hasn't enrolled for the subject");
         }
-      });
-        
      }
      catch(err){
         console.log(err)
