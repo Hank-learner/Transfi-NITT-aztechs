@@ -3,3 +3,6 @@ transfinitte_venv
 dataset
 test
 .vscode
+js/base64toimg.js
+js/testsing.png
+node_modules

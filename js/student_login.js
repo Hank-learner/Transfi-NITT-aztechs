@@ -25,13 +25,13 @@ $(document).ready(function(){
                     }else{
                         msg="<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Invalid user credentials</strong></div>";
                     }
-                    $("#login-message").html(msg);
+                    $("#register-message").html(msg);
                 }
             });
         }
         else{
             var msg="<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Enter all the Fields</strong></div>";
-            $("#login-message").html(msg);
+            $("#register-message").html(msg);
         }
     });
     
