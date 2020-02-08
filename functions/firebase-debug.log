@@ -152,3 +152,57 @@
 [info] i  functions: Finished "tagger" in ~1s
 [debug] [2020-02-08T12:42:20.454Z] [worker-tagger-af38cadc-a61c-4471-bf6e-7f9811d22bbb]: IDLE
 [debug] [2020-02-08T12:42:20.455Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-02-08T19:10:16.242Z] ----------------------------------------------------------------------
+[debug] [2020-02-08T19:10:16.244Z] Command:       /usr/bin/node /usr/local/bin/firebase serve
+[debug] [2020-02-08T19:10:16.244Z] CLI Version:   7.12.1
+[debug] [2020-02-08T19:10:16.244Z] Platform:      linux
+[debug] [2020-02-08T19:10:16.244Z] Node Version:  v10.15.2
+[debug] [2020-02-08T19:10:16.245Z] Time:          Sun Feb 09 2020 00:40:16 GMT+0530 (India Standard Time)
+[debug] [2020-02-08T19:10:16.245Z] ----------------------------------------------------------------------
+[debug] [2020-02-08T19:10:16.245Z] 
+[debug] [2020-02-08T19:10:16.251Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-08T19:10:16.251Z] > authorizing via signed-in user
+[debug] [2020-02-08T19:10:16.252Z] [iam] checking project aztech-e3e7f for permissions ["firebase.projects.get"]
+[debug] [2020-02-08T19:10:16.253Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-08T19:10:16.253Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-08T19:10:16.636Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-08T19:10:16.643Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/aztech-e3e7f:testIamPermissions  
+
+[debug] [2020-02-08T19:10:18.192Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-08T19:10:18.195Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f  
+ 
+[debug] [2020-02-08T19:10:18.838Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/joel/Documents/sih/Transfi-NITT-aztechs'...
+[info] 
+[debug] [2020-02-08T19:10:18.847Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-02-08T19:10:20.050Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/joel/Documents/sih/Transfi-NITT-aztechs/functions" for Cloud Functions...
+[debug] [2020-02-08T19:10:20.099Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-08T19:10:20.099Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-08T19:10:20.099Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-08T19:10:20.100Z] [worker-~diagnostic~-be898138-cbc2-4b16-a521-390d008e5abb]: Assigning socketPath: /tmp/fire_emu_16445.sock
+[debug] [2020-02-08T19:10:20.100Z] [worker-~diagnostic~-be898138-cbc2-4b16-a521-390d008e5abb]: BUSY
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-02-08T19:10:20.712Z] [runtime-status] [16445] Functions runtime initialized. {"cwd":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions","node_version":"10.15.2"}
+[debug] [2020-02-08T19:10:20.715Z] [runtime-status] [16445] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-08T19:10:20.717Z] [runtime-status] [16445] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-08T19:10:20.717Z] [runtime-status] [16445] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T19:10:20.718Z] [runtime-status] [16445] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[studentLogin]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/studentLogin).
+[info] ✔  functions[student_today_attendance]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/student_today_attendance).
+[info] ✔  functions[message_to_prof]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/message_to_prof).
+[info] ✔  functions[view_student_timetable]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/view_student_timetable).
+[info] ✔  functions[logoutStudent]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/logoutStudent).
+[info] ✔  functions[profLogin]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/profLogin).
+[info] ✔  functions[getSubjects]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/getSubjects).
+[info] ✔  functions[getClass]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/getClass).
+[info] ✔  functions[update_attendance]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/update_attendance).
+[info] ✔  functions[view_professor_timetable]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/view_professor_timetable).
+[info] ✔  functions[logoutProf]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/logoutProf).
+[debug] [2020-02-08T19:10:21.117Z] [worker-~diagnostic~-be898138-cbc2-4b16-a521-390d008e5abb]: IDLE
