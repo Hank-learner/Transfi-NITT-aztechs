@@ -1,83 +1,154 @@
-[debug] [2020-02-08T10:23:07.720Z] ----------------------------------------------------------------------
-[debug] [2020-02-08T10:23:07.721Z] Command:       /usr/local/bin/firebase /home/vishal/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
-[debug] [2020-02-08T10:23:07.721Z] CLI Version:   7.12.1
-[debug] [2020-02-08T10:23:07.721Z] Platform:      linux
-[debug] [2020-02-08T10:23:07.722Z] Node Version:  v12.13.1
-[debug] [2020-02-08T10:23:07.722Z] Time:          Sat Feb 08 2020 15:53:07 GMT+0530 (India Standard Time)
-[debug] [2020-02-08T10:23:07.722Z] ----------------------------------------------------------------------
-[debug] [2020-02-08T10:23:07.722Z] 
-[debug] [2020-02-08T10:23:07.726Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-02-08T10:23:07.726Z] > authorizing via signed-in user
-[debug] [2020-02-08T10:23:07.726Z] [iam] checking project aztech-e3e7f for permissions ["firebase.projects.get"]
-[debug] [2020-02-08T10:23:07.727Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/aztech-e3e7f:testIamPermissions  
+[debug] [2020-02-08T12:34:35.623Z] ----------------------------------------------------------------------
+[debug] [2020-02-08T12:34:35.625Z] Command:       /usr/bin/node /usr/local/bin/firebase serve
+[debug] [2020-02-08T12:34:35.625Z] CLI Version:   7.12.1
+[debug] [2020-02-08T12:34:35.626Z] Platform:      linux
+[debug] [2020-02-08T12:34:35.626Z] Node Version:  v10.15.2
+[debug] [2020-02-08T12:34:35.626Z] Time:          Sat Feb 08 2020 18:04:35 GMT+0530 (India Standard Time)
+[debug] [2020-02-08T12:34:35.626Z] ----------------------------------------------------------------------
+[debug] [2020-02-08T12:34:35.626Z] 
+[debug] [2020-02-08T12:34:35.632Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-08T12:34:35.632Z] > authorizing via signed-in user
+[debug] [2020-02-08T12:34:35.632Z] [iam] checking project aztech-e3e7f for permissions ["firebase.projects.get"]
+[debug] [2020-02-08T12:34:35.634Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/aztech-e3e7f:testIamPermissions  
 
-[debug] [2020-02-08T10:23:13.576Z] <<< HTTP RESPONSE 200
-[debug] [2020-02-08T10:23:13.578Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f  
+[debug] [2020-02-08T12:34:37.085Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-08T12:34:37.089Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f  
  
-[debug] [2020-02-08T10:23:14.051Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-08T12:34:37.505Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from '/home/vishal/projects/Transfi-NITT-aztechs'...
+[info] === Serving from '/home/joel/Documents/sih/Transfi-NITT-aztechs'...
 [info] 
-[debug] [2020-02-08T10:23:14.056Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f/webApps/-/config  
+[debug] [2020-02-08T12:34:37.518Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f/webApps/-/config  
  
-[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
 [info] ✔  functions: Emulator started at http://localhost:5001
-[debug] [2020-02-08T10:23:15.043Z] <<< HTTP RESPONSE 200
-[info] i  functions: Watching "/home/vishal/projects/Transfi-NITT-aztechs/functions" for Cloud Functions...
-[debug] [2020-02-08T10:23:15.187Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-02-08T10:23:15.188Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
-[debug] [2020-02-08T10:23:15.188Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-02-08T10:23:15.189Z] [worker-~diagnostic~-1a3c0ce3-be86-421a-95a8-b5cf25681b62]: Assigning socketPath: /tmp/fire_emu_18971.sock
-[debug] [2020-02-08T10:23:15.189Z] [worker-~diagnostic~-1a3c0ce3-be86-421a-95a8-b5cf25681b62]: BUSY
+[debug] [2020-02-08T12:34:38.441Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/joel/Documents/sih/Transfi-NITT-aztechs/functions" for Cloud Functions...
+[debug] [2020-02-08T12:34:38.492Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-08T12:34:38.492Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-08T12:34:38.493Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-08T12:34:38.494Z] [worker-~diagnostic~-37b04ec7-d880-4b9d-b258-74f034a0be46]: Assigning socketPath: /tmp/fire_emu_14844.sock
+[debug] [2020-02-08T12:34:38.496Z] [worker-~diagnostic~-37b04ec7-d880-4b9d-b258-74f034a0be46]: BUSY
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
-[debug] [2020-02-08T10:23:15.518Z] [runtime-status] [18971] Functions runtime initialized. {"cwd":"/home/vishal/projects/Transfi-NITT-aztechs/functions","node_version":"12.13.1"}
-[debug] [2020-02-08T10:23:15.520Z] [runtime-status] [18971] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-02-08T10:23:15.522Z] [runtime-status] [18971] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-02-08T10:23:15.523Z] [runtime-status] [18971] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-02-08T10:23:15.525Z] [runtime-status] [18971] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T12:34:39.181Z] [runtime-status] [14844] Functions runtime initialized. {"cwd":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions","node_version":"10.15.2"}
+[debug] [2020-02-08T12:34:39.183Z] [runtime-status] [14844] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-08T12:34:39.184Z] [runtime-status] [14844] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-08T12:34:39.186Z] [runtime-status] [14844] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T12:34:39.187Z] [runtime-status] [14844] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
 [info] ✔  functions[studentLogin]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/studentLogin).
 [info] ✔  functions[profLogin]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/profLogin).
 [info] ✔  functions[tagger]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/tagger).
-[debug] [2020-02-08T10:23:15.747Z] [worker-~diagnostic~-1a3c0ce3-be86-421a-95a8-b5cf25681b62]: IDLE
-[debug] [2020-02-08T10:23:18.305Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-02-08T10:23:18.305Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-02-08T10:23:18.306Z] Accepted request GET /aztech-e3e7f/us-central1/tagger --> tagger
-[debug] [2020-02-08T10:23:18.316Z] [worker-pool] addWorker(tagger)
-[debug] [2020-02-08T10:23:18.316Z] [worker-pool] Adding worker with key tagger, total=1
-[debug] [2020-02-08T10:23:18.316Z] [worker-pool] submitWork(triggerId=tagger)
-[debug] [2020-02-08T10:23:18.316Z] [worker-tagger-83d2cd02-8b09-4f20-8e64-b58dabe40ffa]: Assigning socketPath: /tmp/fire_emu_19052.sock
-[debug] [2020-02-08T10:23:18.316Z] [worker-tagger-83d2cd02-8b09-4f20-8e64-b58dabe40ffa]: BUSY
-[debug] [2020-02-08T10:23:19.058Z] [runtime-status] [19052] Functions runtime initialized. {"cwd":"/home/vishal/projects/Transfi-NITT-aztechs/functions","node_version":"12.13.1"}
-[debug] [2020-02-08T10:23:19.061Z] [runtime-status] [19052] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-02-08T10:23:19.065Z] [runtime-status] [19052] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-02-08T10:23:19.068Z] [runtime-status] [19052] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-02-08T10:23:19.071Z] [runtime-status] [19052] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-02-08T10:23:19.638Z] [runtime-status] [19052] Trigger "tagger" has been found, beginning invocation!
+[debug] [2020-02-08T12:34:39.489Z] [worker-~diagnostic~-37b04ec7-d880-4b9d-b258-74f034a0be46]: IDLE
+[debug] [2020-02-08T12:34:41.808Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-02-08T12:34:41.808Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-02-08T12:34:41.808Z] Accepted request GET /aztech-e3e7f/us-central1/tagger --> tagger
+[debug] [2020-02-08T12:34:41.814Z] [worker-pool] addWorker(tagger)
+[debug] [2020-02-08T12:34:41.814Z] [worker-pool] Adding worker with key tagger, total=1
+[debug] [2020-02-08T12:34:41.814Z] [worker-pool] submitWork(triggerId=tagger)
+[debug] [2020-02-08T12:34:41.814Z] [worker-tagger-b10a3d42-5402-45c1-bc64-c966b309b853]: Assigning socketPath: /tmp/fire_emu_14932.sock
+[debug] [2020-02-08T12:34:41.814Z] [worker-tagger-b10a3d42-5402-45c1-bc64-c966b309b853]: BUSY
+[debug] [2020-02-08T12:34:42.464Z] [runtime-status] [14932] Functions runtime initialized. {"cwd":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions","node_version":"10.15.2"}
+[debug] [2020-02-08T12:34:42.466Z] [runtime-status] [14932] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-08T12:34:42.468Z] [runtime-status] [14932] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-08T12:34:42.470Z] [runtime-status] [14932] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T12:34:42.470Z] [runtime-status] [14932] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T12:34:42.781Z] [runtime-status] [14932] Trigger "tagger" has been found, beginning invocation!
 [info] i  functions: Beginning execution of "tagger"
-[debug] [2020-02-08T10:23:19.640Z] [runtime-status] [19052] triggerDefinition {"httpsTrigger":{},"name":"tagger","entryPoint":"tagger"}
-[debug] [2020-02-08T10:23:19.640Z] [runtime-status] [19052] Running tagger in mode HTTPS
-[debug] [2020-02-08T10:23:19.646Z] [runtime-status] [19052] Attempting to listen to socketPath: /tmp/fire_emu_19052.sock
-[debug] [2020-02-08T10:23:19.657Z] [functions] Runtime ready! Sending request!
-[debug] [2020-02-08T10:23:19.707Z] [runtime-status] [19052] Ephemeral server handling GET request
-[info] >  /usr/local/bin/firebase: symbol lookup error: /home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/@fridgerator/pynode/build/Release/PyNode.node: undefined symbol: Py_IsInitialized
-[debug] [2020-02-08T10:23:19.728Z] [worker-tagger-83d2cd02-8b09-4f20-8e64-b58dabe40ffa]: exited
-[debug] [2020-02-08T10:23:19.728Z] [worker-tagger-83d2cd02-8b09-4f20-8e64-b58dabe40ffa]: FINISHED
-[debug] [2020-02-08T10:23:19.729Z] [work-queue] {"queueLength":0,"workRunningCount":0}
-[debug] [2020-02-08T10:23:57.849Z] File /home/vishal/projects/Transfi-NITT-aztechs/functions/tagger.js changed, reloading triggers
-[debug] [2020-02-08T10:23:58.850Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
-[debug] [2020-02-08T10:23:58.851Z] [worker-~diagnostic~-1a3c0ce3-be86-421a-95a8-b5cf25681b62]: FINISHING
-[debug] [2020-02-08T10:23:58.853Z] [worker-pool] Cleaned up workers for tagger: 1 --> 0
-[debug] [2020-02-08T10:23:58.872Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-02-08T10:23:58.872Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
-[debug] [2020-02-08T10:23:58.872Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-02-08T10:23:58.873Z] [worker-~diagnostic~-0798601e-8886-4676-9ee7-b0c37c5c40be]: Assigning socketPath: /tmp/fire_emu_19174.sock
-[debug] [2020-02-08T10:23:58.873Z] [worker-~diagnostic~-0798601e-8886-4676-9ee7-b0c37c5c40be]: BUSY
-[debug] [2020-02-08T10:23:58.876Z] [worker-~diagnostic~-1a3c0ce3-be86-421a-95a8-b5cf25681b62]: exited
-[debug] [2020-02-08T10:23:58.877Z] [worker-~diagnostic~-1a3c0ce3-be86-421a-95a8-b5cf25681b62]: FINISHED
-[debug] [2020-02-08T10:23:59.338Z] [runtime-status] [19174] Functions runtime initialized. {"cwd":"/home/vishal/projects/Transfi-NITT-aztechs/functions","node_version":"12.13.1"}
-[debug] [2020-02-08T10:23:59.340Z] [runtime-status] [19174] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-02-08T10:23:59.341Z] [runtime-status] [19174] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-02-08T10:23:59.342Z] [runtime-status] [19174] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-02-08T10:23:59.344Z] [runtime-status] [19174] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vishal/projects/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-02-08T10:23:59.557Z] [worker-~diagnostic~-0798601e-8886-4676-9ee7-b0c37c5c40be]: IDLE
+[debug] [2020-02-08T12:34:42.782Z] [runtime-status] [14932] triggerDefinition {"httpsTrigger":{},"name":"tagger","entryPoint":"tagger"}
+[debug] [2020-02-08T12:34:42.783Z] [runtime-status] [14932] Running tagger in mode HTTPS
+[debug] [2020-02-08T12:34:42.786Z] [runtime-status] [14932] Attempting to listen to socketPath: /tmp/fire_emu_14932.sock
+[debug] [2020-02-08T12:34:42.791Z] [functions] Runtime ready! Sending request!
+[debug] [2020-02-08T12:34:42.836Z] [runtime-status] [14932] Ephemeral server handling GET request
+[debug] [2020-02-08T12:34:42.841Z] [runtime-status] [14932] Ephemeral server survived.
+[info] i  functions: Finished "tagger" in ~1s
+[debug] [2020-02-08T12:34:42.974Z] [worker-tagger-b10a3d42-5402-45c1-bc64-c966b309b853]: IDLE
+[debug] [2020-02-08T12:34:42.974Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-02-08T12:37:41.397Z] File /home/joel/Documents/sih/Transfi-NITT-aztechs/functions/tagger.js changed, reloading triggers
+[debug] [2020-02-08T12:37:41.576Z] File /home/joel/Documents/sih/Transfi-NITT-aztechs/functions/tagger.js changed, reloading triggers
+[debug] [2020-02-08T12:37:41.730Z] File /home/joel/Documents/sih/Transfi-NITT-aztechs/functions/tagger.js changed, reloading triggers
+[debug] [2020-02-08T12:37:42.732Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-08T12:37:42.732Z] [worker-~diagnostic~-37b04ec7-d880-4b9d-b258-74f034a0be46]: FINISHING
+[debug] [2020-02-08T12:37:42.733Z] [worker-pool] Shutting down IDLE worker (tagger)
+[debug] [2020-02-08T12:37:42.733Z] [worker-tagger-b10a3d42-5402-45c1-bc64-c966b309b853]: FINISHING
+[debug] [2020-02-08T12:37:42.749Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-08T12:37:42.750Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-08T12:37:42.750Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-08T12:37:42.750Z] [worker-~diagnostic~-dcb48116-b8e5-42f4-a16c-d9650cd88aa4]: Assigning socketPath: /tmp/fire_emu_15397.sock
+[debug] [2020-02-08T12:37:42.750Z] [worker-~diagnostic~-dcb48116-b8e5-42f4-a16c-d9650cd88aa4]: BUSY
+[debug] [2020-02-08T12:37:42.756Z] [worker-~diagnostic~-37b04ec7-d880-4b9d-b258-74f034a0be46]: exited
+[debug] [2020-02-08T12:37:42.757Z] [worker-~diagnostic~-37b04ec7-d880-4b9d-b258-74f034a0be46]: FINISHED
+[debug] [2020-02-08T12:37:42.757Z] [worker-tagger-b10a3d42-5402-45c1-bc64-c966b309b853]: exited
+[debug] [2020-02-08T12:37:42.757Z] [worker-tagger-b10a3d42-5402-45c1-bc64-c966b309b853]: FINISHED
+[debug] [2020-02-08T12:37:43.423Z] [runtime-status] [15397] Functions runtime initialized. {"cwd":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions","node_version":"10.15.2"}
+[debug] [2020-02-08T12:37:43.426Z] [runtime-status] [15397] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-08T12:37:43.428Z] [runtime-status] [15397] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-08T12:37:43.430Z] [runtime-status] [15397] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T12:37:43.432Z] [runtime-status] [15397] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T12:37:43.732Z] [worker-~diagnostic~-dcb48116-b8e5-42f4-a16c-d9650cd88aa4]: IDLE
+[debug] [2020-02-08T12:42:01.668Z] ----------------------------------------------------------------------
+[debug] [2020-02-08T12:42:01.670Z] Command:       /usr/bin/node /usr/local/bin/firebase serve
+[debug] [2020-02-08T12:42:01.670Z] CLI Version:   7.12.1
+[debug] [2020-02-08T12:42:01.670Z] Platform:      linux
+[debug] [2020-02-08T12:42:01.670Z] Node Version:  v10.15.2
+[debug] [2020-02-08T12:42:01.670Z] Time:          Sat Feb 08 2020 18:12:01 GMT+0530 (India Standard Time)
+[debug] [2020-02-08T12:42:01.670Z] ----------------------------------------------------------------------
+[debug] [2020-02-08T12:42:01.670Z] 
+[debug] [2020-02-08T12:42:01.676Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-08T12:42:01.677Z] > authorizing via signed-in user
+[debug] [2020-02-08T12:42:01.677Z] [iam] checking project aztech-e3e7f for permissions ["firebase.projects.get"]
+[debug] [2020-02-08T12:42:01.678Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/aztech-e3e7f:testIamPermissions  
+
+[debug] [2020-02-08T12:42:13.326Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-08T12:42:13.328Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f  
+ 
+[debug] [2020-02-08T12:42:14.836Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/joel/Documents/sih/Transfi-NITT-aztechs'...
+[info] 
+[debug] [2020-02-08T12:42:14.845Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-02-08T12:42:16.724Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/joel/Documents/sih/Transfi-NITT-aztechs/functions" for Cloud Functions...
+[debug] [2020-02-08T12:42:16.784Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-08T12:42:16.784Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-08T12:42:16.785Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-08T12:42:16.786Z] [worker-~diagnostic~-5c830f6f-bc53-4115-a86a-264df7d7fe91]: Assigning socketPath: /tmp/fire_emu_16712.sock
+[debug] [2020-02-08T12:42:16.788Z] [worker-~diagnostic~-5c830f6f-bc53-4115-a86a-264df7d7fe91]: BUSY
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-02-08T12:42:17.463Z] [runtime-status] [16712] Functions runtime initialized. {"cwd":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions","node_version":"10.15.2"}
+[debug] [2020-02-08T12:42:17.465Z] [runtime-status] [16712] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-08T12:42:17.467Z] [runtime-status] [16712] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-08T12:42:17.468Z] [runtime-status] [16712] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T12:42:17.468Z] [runtime-status] [16712] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[studentLogin]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/studentLogin).
+[info] ✔  functions[profLogin]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/profLogin).
+[info] ✔  functions[tagger]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/tagger).
+[debug] [2020-02-08T12:42:17.770Z] [worker-~diagnostic~-5c830f6f-bc53-4115-a86a-264df7d7fe91]: IDLE
+[debug] [2020-02-08T12:42:19.424Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-02-08T12:42:19.424Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-02-08T12:42:19.424Z] Accepted request GET /aztech-e3e7f/us-central1/tagger --> tagger
+[debug] [2020-02-08T12:42:19.431Z] [worker-pool] addWorker(tagger)
+[debug] [2020-02-08T12:42:19.431Z] [worker-pool] Adding worker with key tagger, total=1
+[debug] [2020-02-08T12:42:19.431Z] [worker-pool] submitWork(triggerId=tagger)
+[debug] [2020-02-08T12:42:19.431Z] [worker-tagger-af38cadc-a61c-4471-bf6e-7f9811d22bbb]: Assigning socketPath: /tmp/fire_emu_16791.sock
+[debug] [2020-02-08T12:42:19.432Z] [worker-tagger-af38cadc-a61c-4471-bf6e-7f9811d22bbb]: BUSY
+[debug] [2020-02-08T12:42:20.065Z] [runtime-status] [16791] Functions runtime initialized. {"cwd":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions","node_version":"10.15.2"}
+[debug] [2020-02-08T12:42:20.067Z] [runtime-status] [16791] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-08T12:42:20.069Z] [runtime-status] [16791] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-08T12:42:20.070Z] [runtime-status] [16791] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T12:42:20.071Z] [runtime-status] [16791] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/joel/Documents/sih/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T12:42:20.383Z] [runtime-status] [16791] Trigger "tagger" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "tagger"
+[debug] [2020-02-08T12:42:20.383Z] [runtime-status] [16791] triggerDefinition {"httpsTrigger":{},"name":"tagger","entryPoint":"tagger"}
+[debug] [2020-02-08T12:42:20.383Z] [runtime-status] [16791] Running tagger in mode HTTPS
+[debug] [2020-02-08T12:42:20.388Z] [runtime-status] [16791] Attempting to listen to socketPath: /tmp/fire_emu_16791.sock
+[debug] [2020-02-08T12:42:20.395Z] [functions] Runtime ready! Sending request!
+[debug] [2020-02-08T12:42:20.435Z] [runtime-status] [16791] Ephemeral server handling GET request
+[debug] [2020-02-08T12:42:20.442Z] [runtime-status] [16791] Ephemeral server survived.
+[info] i  functions: Finished "tagger" in ~1s
+[debug] [2020-02-08T12:42:20.454Z] [worker-tagger-af38cadc-a61c-4471-bf6e-7f9811d22bbb]: IDLE
+[debug] [2020-02-08T12:42:20.455Z] [work-queue] {"queueLength":0,"workRunningCount":0}
