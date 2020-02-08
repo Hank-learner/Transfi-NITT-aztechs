@@ -47,6 +47,7 @@ $(document).ready(function () {
                 success: function (response) {
                     var msg = "";
                     if (!response) {
+                        $("#class_list_table").html("");
                         response.forEach((element,index)=>{
                             var tr=document.createElement("tr");
                             var td=document.createElement(td);

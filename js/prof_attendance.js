@@ -110,6 +110,29 @@ $(document).ready(function () {
         window.location = "prof_login.html";
     });
 
+    $.ajax({
+        url: 'http://localhost:5001/aztech-e3e7f/us-central1/studentLogin',
+        type: 'post',
+        data: { rollno: localStorage.getItem("att_user_prof_roll") },
+        success: function (response) {
+            var msg = "";
+            
+            if (!response) {
+                response.forEach((element,index)=>{
+                    var a=document.createElement("a");
+                    a.className="dropdown-item";
+                    a.setAttribute("href","#");
+                    a.setAttribute("value",element);
+                    a.innerText=element;
+                    $("#dropdown-menu").append(a);
+                });
+            } else {
+                msg = "<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Unable to reach server <br> Reload the page and try again</strong></div>";
+            }
+            $("#status-recieve").html(msg);
+        }
+    });
+
     var selected_subject="";
     $('#dropdown-menu a').on('click', function(){
         console.log("hell");
