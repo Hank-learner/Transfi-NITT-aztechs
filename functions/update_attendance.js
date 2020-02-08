@@ -3,15 +3,10 @@ const config = require("./config.js");
 const db = config.db;
 const middleware = require("./middleware.js");
 const fs = require("fs");
-const cors = require('cors')({
-    origin: true
-});
-
 //function check_student()
 exports.update_attendance = functions.https.onRequest(async (req, res) => {
     // return middleware.jwtCheck(req, res, async () => {
         try {
-            return cors(req, res, async () => {
             let rollno = fs.readFileSync("rollno_list.txt").split(" ");
             let profid = req.body.profid;
             let subject = req.body.subject;
@@ -83,7 +78,6 @@ exports.update_attendance = functions.https.onRequest(async (req, res) => {
                 })
             )
             res.status(200).send("Updated");
-            });
         } catch (err) {
             console.log(err);
             res.status(500).send("Internal Server Error");

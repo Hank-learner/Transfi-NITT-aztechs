@@ -3,15 +3,11 @@ const config = require("./config.js");
 const db = config.db;
 const jwt = require("jsonwebtoken");
 const middleware = require("./middleware.js");
-const cors = require('cors')({
-    origin: true
-});
 
 // to get details of students
 exports.student_details = functions.https.onRequest(async (req, res) =>{
     // return middleware.jwtCheck(req, res, async () => {
         try {
-            return cors(req, res, async () => {
             const roll_no= req.query.roll_no;
             ref=await db.ref(`/Students/${roll_no}/subjects`);
             let snapshot = await ref.once(`value`);
@@ -20,10 +16,8 @@ exports.student_details = functions.https.onRequest(async (req, res) =>{
               
             else
                 res.status(400).send("invalid roll_no");
-            });
                 
-            }
-        catch(err){
+            } catch(err){
             console.log(err);
             return res.status(500).send("Internal server error");
         }
