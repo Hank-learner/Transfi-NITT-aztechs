@@ -111,7 +111,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: 'http://localhost:5001/aztech-e3e7f/us-central1/studentLogin',
+        url: 'http://localhost:5001/aztech-e3e7f/us-central1/getSubjects',
         type: 'post',
         data: { rollno: localStorage.getItem("att_user_prof_roll") },
         success: function (response) {
@@ -147,7 +147,7 @@ $(document).ready(function () {
         console.log(base64string);
         if (username != "" && base64string != "" && selected_subject != "" ) {
             $.ajax({
-                url: 'http://localhost:5001/aztech-e3e7f/us-central1/studentLogin',
+                url: 'http://localhost:5001/aztech-e3e7f/us-central1/update_attendance',
                 type: 'post',
                 data: { rollno: username, image: base64string, subject:selected_subject },
                 success: function (response) {

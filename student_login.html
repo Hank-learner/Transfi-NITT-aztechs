@@ -37,7 +37,7 @@
 
 	<div class="login-page">
 		<div class="form">
-			<form class="register-form">
+			<form class="register-form" onsubmit="return false">
 				<div id="register-message"></div>
 				<input type="text" placeholder="Roll" id="register-username"/>
 				<input type="password" placeholder="password" id="register-password"/>
@@ -45,7 +45,7 @@
 				<button id="register-button">create</button>
 				<p class="message">Already registered? <a href="#">Sign In</a></p>
 			</form>
-			<form class="login-form">
+			<form class="login-form" onsubmit="return false">
 				<div id="login-message"></div>
 				<input type="text" placeholder="Roll" id="login-username"/>
 				<input type="password" placeholder="password" id="login-password"/>
