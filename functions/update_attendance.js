@@ -4,20 +4,22 @@ const db = config.db;
 const middleware = require("./middleware.js");
 const fs = require("fs");
 const base64ToImage = require('base64-to-image');
-const path = "../output/rollno_list.txt";
+
+exports.generateImage = functions.https.onRequest(async (req, res) => {
+    var path ='../captured/';
+    var optionalObj = {'fileName': Date.now().toString(), 'type':'png'};
+    base64ToImage(req.body.image,path,optionalObj);
+    console.log("Filename: captured/", optionalObj.fileName + "." + optionalObj.type)
+    res.redirect("http://localhost:5001/aztech-e3e7f/us-central1/update_attendance");
+});
 
 //function check_student()
 exports.update_attendance = functions.https.onRequest(async (req, res) => {
     // return middleware.jwtCheck(req, res, async () => {
         try {
-                if(fs.existsSync(path)) fs.unlinkSync(path);
-                
-                let base64str = req.body.image;
-                let image_path = '../captured/';
-                let optionObj = {'fileName': Date.now().toString(), 'type': 'jpg'};
-                base64ToImage(base64str, image_path, optionObj);
-                while(!fs.existsSync(path));
-                let rollno = fs.readFileSync("rollno_list.txt").split(" ");
+                if(fs.existsSync('../output/rollno_list.txt')) fs.unlinkSync('../output/rollno_list.txt');
+                 while(!fs.existsSync("../output/rollno_list.txt"));
+                let rollno = fs.readFileSync("../output/rollno_list.txt", 'utf8').split(" ");
                 let profid = req.body.profid;
                 let subject = req.body.subject;
                 let date = new Date().toString().slice(0, 15);
@@ -88,6 +90,7 @@ exports.update_attendance = functions.https.onRequest(async (req, res) => {
                     })
                 )
                 res.status(200).send("Updated");
+            
         } catch (err) {
             console.log(err);
             res.status(500).send("Internal Server Error");
