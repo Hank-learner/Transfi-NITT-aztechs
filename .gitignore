@@ -1,3 +1,5 @@
 dataset
 __pycache__
 .vscode
+firebase-debug.log
+node_modules/

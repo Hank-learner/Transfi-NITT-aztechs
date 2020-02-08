@@ -4,10 +4,14 @@ const privateKey = secrets.jwt_key;
 const config = require("./config.js");
 const jwt = require("jsonwebtoken");
 const db = config.db;
+const cors = require('cors')({
+    origin: true
+});
 
 // login for students
 exports.studentLogin = functions.https.onRequest(async (req, res) => {
     try {
+        return cors(req, res, async () => {
         let { rollno, password } = req.body;
         const ref = await db.ref(`/Students/${rollno}`);
         const snapshot = await ref.once("value");
@@ -23,6 +27,7 @@ exports.studentLogin = functions.https.onRequest(async (req, res) => {
         } else {
             res.status(401).send("Login failed");
         }
+        });
 
     } catch(err) {
         console.log(err);
@@ -33,6 +38,7 @@ exports.studentLogin = functions.https.onRequest(async (req, res) => {
 // login for professors
 exports.profLogin = functions.https.onRequest(async (req, res) => {
     try {
+        return cors(req, res, async () => {
         let { rollno, password } = req.body;
         const ref = await db.ref(`/Professors/${rollno}`);
         const snapshot = await ref.once("value");
@@ -47,6 +53,7 @@ exports.profLogin = functions.https.onRequest(async (req, res) => {
         } else {
             res.status(401).send("Login failed");
         }
+        });
 
     } catch(err) {
         console.log(err);
