@@ -32,7 +32,7 @@
 				<a href="prof_message.html" class="nav-item nav-link">Message</a>
 			</div>
 			<div class="navbar-nav ml-auto">
-				<a href="prof_login.html" class="nav-item nav-link">Login</a>
+				<a href="prof_login.html" class="nav-item nav-link" id="logout">Logout</a>
         </div>
     </nav>
 
@@ -47,15 +47,15 @@
             </a>
 
             <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">XXPC 23</a>
-                <a class="dropdown-item" href="#">XXPE 29</a>
-                <a class="dropdown-item" href="#">XXOE 67</a>
-                <a class="dropdown-item" href="#">XXOE 68</a>
-                <a class="dropdown-item" href="#">XXMI 98</a>
+                <a class="dropdown-item" href="#" value="">XXPC 23</a>
+                <a class="dropdown-item" href="#" value="">XXPE 29</a>
+                <a class="dropdown-item" href="#" value="">XXOE 67</a>
+                <a class="dropdown-item" href="#" value="">XXOE 68</a>
+                <a class="dropdown-item" href="#" value="">XXMI 98</a>
             </div>
         </div>
         <br>
-        <p>Select your course to list</p>
+        <p id="status-recieve">Select your course to list</p>
     </div>
 
 
@@ -66,11 +66,10 @@
                     <div class="box">
                         <div class="box-header with-border">
                             <h3 class="box-title" id="sel_sub_disp">XXOE 27  - Class list</h3>
-                            <p>Total classes : 50</p>
                         </div>
-                        <div class="box-body">
+                        <div class="box-body" id="table-div">
                             <table class="table table-bordered">
-                                <tbody>
+                                <tbody  id="class_list_table">
                                     <tr>
                                         <th style="width: 100px">Roll no</th>
                                         <th style="width: 40px">Attendance percent</th>
@@ -99,6 +98,7 @@
             </div>
         </div>
     </div>
+    <script src="js/prof_record.js"></script>
 </body>
 
 </html>

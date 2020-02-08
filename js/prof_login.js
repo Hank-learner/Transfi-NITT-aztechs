@@ -19,7 +19,7 @@ $(document).ready(function () {
                 data:{rollno:username,password:password},
                 success:function(response){
                     var msg = "";
-                    if(response == 1){
+                    if(response == "Login Successful"){
                         msg="<div class='alert alert-success alert-dismissible fade show' role='alert'><strong>Logging in</strong></div>";
                         localStorage.setItem("att_user_prof_roll",username);
                         window.location = "prof_attendance.html";

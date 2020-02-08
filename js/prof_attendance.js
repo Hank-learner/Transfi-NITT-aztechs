@@ -99,7 +99,17 @@
 })();
 
 $(document).ready(function () {
-    
+
+    var useroll=localStorage.getItem("att_user_prof_roll");
+    console.log(useroll);
+    if(useroll=="" || !useroll)
+        window.location = "prof_login.html";
+
+    $( "#logout" ).click(function() {
+        localStorage.removeItem("att_user_prof_roll");
+        window.location = "prof_login.html";
+    });
+
     var selected_subject="";
     $('#dropdown-menu a').on('click', function(){
         console.log("hell");
@@ -120,17 +130,17 @@ $(document).ready(function () {
                 success: function (response) {
                     var msg = "";
                     if (response == 1) {
-                        msg = "<div class='alert alert-success alert-dismissible fade show' role='alert'><strong>Logging in</strong></div>";
+                        msg = "<div class='alert alert-success alert-dismissible fade show' role='alert'><strong>Sucess updating attendance</strong></div>";
                         window.location = "student_report.html";
                     } else {
-                        msg = "<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Invalid user credentials</strong></div>";
+                        msg = "<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>No respsonse from the server</strong></div>";
                     }
                     $("#message-confirm").html(msg);
                 }
             });
         }
         else {
-            var msg = "<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Select subject</strong></div>";
+            var msg = "<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>Log in to continue</strong></div>";
             $("#message-confirm").html(msg);
         }
     });

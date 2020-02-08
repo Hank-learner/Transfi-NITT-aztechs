@@ -21,7 +21,7 @@ $(document).ready(function(){
                 data:{username:username,password:password},
                 success:function(response){
                     var msg = "";
-                    if(response == 1){
+                    if(response == "Register Successful"){
                         msg="<div  class='alert alert-success alert-dismissible fade show' role='alert'><strong>Logging in</strong></div>";
                         window.location = "student_report.html";
                     }else{
@@ -48,7 +48,7 @@ $(document).ready(function(){
                 data:{rollno:username,password:password},
                 success:function(response){
                     var msg = "";
-                    if(response == 1){
+                    if(response == "Login Successful"){
                         msg="<div class='alert alert-success alert-dismissible fade show' role='alert'><strong>Logging in</strong></div>";
                         localStorage.setItem("att_user_stu_roll",username);
                         window.location = "student_report.html";
