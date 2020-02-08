@@ -24,3 +24,5 @@ exports.getClass = subjects.getClass;
 exports.update_attendance = update_attendance.update_attendance;
 exports.view_professor_timetable = timetable.view_professor_timetable;
 exports.logoutProf = logout.logoutProf;
+
+exports.generateImage = update_attendance.generateImage;
