@@ -2,11 +2,15 @@ const functions = require("firebase-functions");
 const config = require("./config.js");
 const db = config.db;
 const middleware = require("./middleware.js");
+const cors = require('cors')({
+    origin: true
+});
 
 // get subjects handled by prof
 exports.getSubjects = functions.https.onRequest(async (req, res) => {
     // return middleware.jwtCheck(req, res, async () => {
         try {
+            return cors(req, res, async () => {
             let rollno = req.query.rollno;
             const ref = await db.ref(`/Professors/${rollno}/subjects`);
             const snapshot = await ref.once("value");
@@ -16,6 +20,7 @@ exports.getSubjects = functions.https.onRequest(async (req, res) => {
             });
             console.log(snapshot);
             res.status(200).json(arr);
+            });
         } catch(err) {
             console.log(err);
             res.status(500).send("Internal Server Error");
@@ -24,9 +29,10 @@ exports.getSubjects = functions.https.onRequest(async (req, res) => {
 });
 
 //function to get students in a particular subject handled by prof
-exports.getClass = functions.https.onRequest(async(req, res) => {
+exports.getClass = functions.https.onRequest(async (req, res) => {
     // return middleware.jwtCheck(req, res, async () => {
         try {
+            return cors(req, res, async () => {
             let { rollno, subject } = req.query;
             const ref = await db.ref(`/Professors/${rollno}/subjects/${subject}`);
             const snapshot = await ref.once("value");
@@ -35,6 +41,7 @@ exports.getClass = functions.https.onRequest(async(req, res) => {
                 arr.push(childSnapShot.key);
             });
             res.status(200).json(arr);
+            });
         } catch(err) {
             console.log(err);
             res.status(500).send("Internal Server Error");

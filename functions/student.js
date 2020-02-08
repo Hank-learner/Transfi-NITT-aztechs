@@ -2,12 +2,16 @@ const functions = require("firebase-functions");
 const config = require("./config.js");
 const db = config.db;
 const jwt = require("jsonwebtoken");
-const middleware = require("./middleware.js")
+const middleware = require("./middleware.js");
+const cors = require('cors')({
+    origin: true
+});
 
 // to get details of students
-exports.student_details = functions.https.onRequest(async(req, res) =>{
+exports.student_details = functions.https.onRequest(async (req, res) =>{
     // return middleware.jwtCheck(req, res, async () => {
         try {
+            return cors(req, res, async () => {
             const roll_no= req.query.roll_no;
             ref=await db.ref(`/Students/${roll_no}/subjects`);
             let snapshot = await ref.once(`value`);
@@ -16,6 +20,7 @@ exports.student_details = functions.https.onRequest(async(req, res) =>{
               
             else
                 res.status(400).send("invalid roll_no");
+            });
                 
             }
         catch(err){
@@ -27,7 +32,8 @@ exports.student_details = functions.https.onRequest(async(req, res) =>{
 
 exports.message_to_prof = functions.https.onRequest(async(req, res)=>{
     // return middleware.jwtCheck(req, res, async () => {
-      try{  
+      try{
+        return cors(req, res, async () => {
         const roll_no= req.body.roll_no;
         const sub= req.body.subject;
         const text = req.body.text;
@@ -46,6 +52,7 @@ exports.message_to_prof = functions.https.onRequest(async(req, res)=>{
             }
         });
         res.status(201).send("MESSAGES updated");
+        });
     }
     catch(err){
         console.log(err);
