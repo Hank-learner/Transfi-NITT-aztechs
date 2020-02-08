@@ -31,12 +31,12 @@ exports.message_to_prof = functions.https.onRequest(async(req, res)=>{
         const roll_no= req.body.roll_no;
         const sub= req.body.subject;
         const text = req.body.text;
-        let ref1 = await db.ref(`/Students/${roll_no}/${sub}/`);
+        let ref1 = await db.ref(`/Students/${roll_no}/${sub}`);
         let date= new Date().slice(0,15);
 
         let snap= await ref1.once(`value`);
         let prof_no= await snap.child(`prof`).val();
-        let ref2= await db.ref(`/Professors/${prof_no}/Messages/${roll_no}/`)
+        let ref2= await db.ref(`/Professors/${prof_no}/Messages/${roll_no}`)
         
         
         await ref2.update({

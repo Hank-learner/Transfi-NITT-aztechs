@@ -2,12 +2,13 @@ const functions = require("firebase-functions");
 const config = require("./config.js");
 const db = config.db;
 const middleware = require("./middleware.js");
+const fs = require("fs");
 
 //function check_student()
 exports.update_attendance = functions.https.onRequest(async (req, res) => {
     // return middleware.jwtCheck(req, res, async () => {
         try {
-            let rollno = ["106118001", "106118002"];
+            let rollno = fs.readFileSync("rollno_list.txt").split(" ");
             let profid = req.body.profid;
             let subject = req.body.subject;
             let date = new Date().toString().slice(0, 15);
