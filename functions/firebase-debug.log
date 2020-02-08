@@ -1,0 +1,49 @@
+[debug] [2020-02-08T01:56:17.518Z] ----------------------------------------------------------------------
+[debug] [2020-02-08T01:56:17.520Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2020-02-08T01:56:17.520Z] CLI Version:   7.3.2
+[debug] [2020-02-08T01:56:17.520Z] Platform:      linux
+[debug] [2020-02-08T01:56:17.520Z] Node Version:  v12.4.0
+[debug] [2020-02-08T01:56:17.520Z] Time:          Sat Feb 08 2020 07:26:17 GMT+0530 (India Standard Time)
+[debug] [2020-02-08T01:56:17.520Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-02-08T01:56:17.524Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-08T01:56:17.524Z] > authorizing via signed-in user
+[debug] [2020-02-08T01:56:17.525Z] [iam] checking project aztech-e3e7f for permissions ["firebase.projects.get"]
+[debug] [2020-02-08T01:56:17.526Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/aztech-e3e7f:testIamPermissions  
+
+[debug] [2020-02-08T01:56:18.983Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-08T01:56:18.985Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f  
+ 
+[debug] [2020-02-08T01:56:19.383Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/smrithi/aztech/Transfi-NITT-aztechs'...
+[info] 
+[debug] [2020-02-08T01:56:19.394Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/aztech-e3e7f/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-02-08T01:56:21.236Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/smrithi/aztech/Transfi-NITT-aztechs/functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-02-08T01:56:21.561Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/smrithi/aztech/Transfi-NITT-aztechs/functions","node_version":"12.4.0"}
+[debug] [2020-02-08T01:56:21.562Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-02-08T01:56:21.563Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/smrithi/aztech/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-08T01:56:21.564Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/smrithi/aztech/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T01:56:21.564Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/smrithi/aztech/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[studentLogin]: http function initialized (http://localhost:5001/aztech-e3e7f/us-central1/studentLogin).
+[debug] [2020-02-08T01:56:26.709Z] Accepted request POST /aztech-e3e7f/us-central1/studentLogin --> studentLogin
+[debug] [2020-02-08T01:56:26.966Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/smrithi/aztech/Transfi-NITT-aztechs/functions","node_version":"12.4.0"}
+[info] i  functions: Beginning execution of "studentLogin"
+[debug] [2020-02-08T01:56:26.967Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-02-08T01:56:26.969Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/smrithi/aztech/Transfi-NITT-aztechs/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-08T01:56:26.970Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/smrithi/aztech/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T01:56:26.972Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/smrithi/aztech/Transfi-NITT-aztechs/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-08T01:56:27.209Z] [runtime-status] Trigger "studentLogin" has been found, beginning invocation! {}
+[debug] [2020-02-08T01:56:27.209Z] [runtime-status]  {"httpsTrigger":{},"name":"studentLogin","entryPoint":"studentLogin"}
+[debug] [2020-02-08T01:56:27.210Z] [runtime-status] Running studentLogin in mode HTTPS {}
+[debug] [2020-02-08T01:56:27.215Z] {"socketPath":"/tmp/firebase_emulator_invocation_3753.sock"}
+[debug] [2020-02-08T01:56:27.217Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_3753.sock"}
+[debug] [2020-02-08T01:56:27.264Z] [runtime-status] Ephemeral server used! {}
+[debug] [2020-02-08T01:56:29.340Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "studentLogin" in ~2s
