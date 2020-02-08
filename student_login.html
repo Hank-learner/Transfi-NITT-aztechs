@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Attendance manager</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/student_login.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+		<a href="#" class="navbar-brand">
+			Attendance manager
+		</a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<div class="navbar-nav">
+				<a href="student_report.html" class="nav-item nav-link">Report</a>
+				<a href="student_timetable.html" class="nav-item nav-link">Timetable</a>
+				<a href="student_message.html" class="nav-item nav-link">Message</a>
+			</div>
+			<div class="navbar-nav ml-auto">
+				<a href="student_login.html" class="nav-item nav-link active">Login</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="login-page">
+		<div class="form">
+			<form class="register-form">
+				<input type="text" placeholder="name" />
+				<input type="password" placeholder="password" />
+				<input type="text" placeholder="email address" />
+				<button>create</button>
+				<p class="message">Already registered? <a href="#">Sign In</a></p>
+			</form>
+			<form class="login-form">
+				<input type="text" placeholder="username" />
+				<input type="password" placeholder="password" />
+				<button>login</button>
+				<p class="message">Not registered? <a href="#">Create an account</a></p>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/student_login.js"></script>
+</body>
+
+</html>

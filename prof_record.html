@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/courses_list.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            Attendance manager
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+				<a href="prof_record.html" class="nav-item nav-link active">Record</a>
+				<a href="prof_attendance.html" class="nav-item nav-link">Attendance</a>
+				<a href="prof_timetable.html" class="nav-item nav-link">Timetable</a>
+				<a href="prof_message.html" class="nav-item nav-link">Message</a>
+			</div>
+			<div class="navbar-nav ml-auto">
+				<a href="prof_login.html" class="nav-item nav-link">Login</a>
+        </div>
+    </nav>
+
+
+    <div class="container page-container padding">
+        <br>
+        <br>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select course
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">XXPC 23</a>
+                <a class="dropdown-item" href="#">XXPE 29</a>
+                <a class="dropdown-item" href="#">XXOE 67</a>
+                <a class="dropdown-item" href="#">XXOE 68</a>
+                <a class="dropdown-item" href="#">XXMI 98</a>
+            </div>
+        </div>
+        <br>
+        <p>Select your course to list</p>
+    </div>
+
+
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+                <div class="col-md-12">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">XXOE 27  - Class list</h3>
+                            <p>Total classes : 50</p>
+                        </div>
+                        <div class="box-body">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th style="width: 100px">Roll no</th>
+                                        <th style="width: 40px">Attendance percent</th>
+                                    </tr>
+                                    <tr>
+                                        <td>111111111</td>
+                                        <td><span class="badge bg-yellow">55%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>111111111</td>
+                                        <td><span class="badge bg-light-blue">75%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>111111111</td>
+                                        <td><span class="badge bg-red">30%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>111111111</td>
+                                        <td><span class="badge bg-green">90%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
