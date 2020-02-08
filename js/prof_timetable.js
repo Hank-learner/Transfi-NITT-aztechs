@@ -1,15 +1,17 @@
 $(document).ready(function () {
-    var useroll = localStorage.getItem("att_user_stu_roll");
-    if (useroll = "" || !useroll)
-        window.location = "student_login.html"
+
+    var useroll = localStorage.getItem("att_user_prof_roll");
+    if (useroll == "" || !useroll)
+        window.location = "prof_login.html";
 
     $("#logout").click(function () {
-        localStorage.removeItem("att_user_stu_roll");
+        localStorage.removeItem("att_user_prof_roll");
         window.location = "prof_login.html";
     });
 
+
     $.ajax({
-        url: 'http://localhost:5001/aztech-e3e7f/us-central1/view_student_timetable',
+        url: 'http://localhost:5001/aztech-e3e7f/us-central1/view_professor_timetable',
         type: 'get',
         data: { roll_no: useroll },
         success: function (response) {

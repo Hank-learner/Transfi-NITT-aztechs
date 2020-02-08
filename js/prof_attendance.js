@@ -107,12 +107,12 @@ $(document).ready(function () {
 
     $( "#logout" ).click(function() {
         localStorage.removeItem("att_user_prof_roll");
-        window.location = "prof_login.html";
+        window.location = "student_login.html";
     });
 
     $.ajax({
         url: 'http://localhost:5001/aztech-e3e7f/us-central1/getSubjects',
-        type: 'post',
+        type: 'get',
         data: { rollno: localStorage.getItem("att_user_prof_roll") },
         success: function (response) {
             var msg = "";
