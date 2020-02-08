@@ -1,6 +1,5 @@
 const jwt = require("jsonwebtoken");
 const secrets = require("./secrets.json");
-
 const pubkey = secrets.jwt_key;
 
 exports.jwtCheck = function checkJWT(req, res, next) {
