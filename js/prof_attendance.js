@@ -1,3 +1,9 @@
+var selected_subject="";
+function update_sel_sub(e){
+    selected_subject=e.innerText;
+    $("#sel_sub_disp").html("selected subject is "+selected_subject);
+}
+
 (function () {
     // The width and height of the captured photo. We will set the
     // width to the value defined here, but the height will be
@@ -110,19 +116,28 @@ $(document).ready(function () {
         window.location = "student_login.html";
     });
 
+    // var selected_subject="";
+    // $('#dropdown-menu a').on('click', function(){
+    //     console.log("hell");
+    //     selected_subject=$(this).text();
+    //     $("#sel_sub_disp").html("selected subject is "+selected_subject);
+    // });
+
     $.ajax({
         url: 'http://localhost:5001/aztech-e3e7f/us-central1/getSubjects',
         type: 'get',
         data: { rollno: localStorage.getItem("att_user_prof_roll") },
         success: function (response) {
             var msg = "";
-            
-            if (!response) {
+            console.log(response);
+            if (response) {
+                console.log("ins");
                 response.forEach((element,index)=>{
                     var a=document.createElement("a");
                     a.className="dropdown-item";
                     a.setAttribute("href","#");
                     a.setAttribute("value",element);
+                    a.setAttribute("onclick","update_sel_sub(this);");
                     a.innerText=element;
                     $("#dropdown-menu").append(a);
                 });
@@ -133,12 +148,7 @@ $(document).ready(function () {
         }
     });
 
-    var selected_subject="";
-    $('#dropdown-menu a').on('click', function(){
-        console.log("hell");
-        selected_subject=$(this).text();
-        $("#sel_sub_disp").html("selected subject is "+selected_subject);
-    });
+
 
     $("#confirm-send").click(function () {
         console.log("reg");
@@ -149,12 +159,12 @@ $(document).ready(function () {
             $.ajax({
                 url: 'http://localhost:5001/aztech-e3e7f/us-central1/update_attendance',
                 type: 'post',
-                data: { rollno: username, image: base64string, subject:selected_subject },
+                data: { profid: username, image: base64string, subject:selected_subject },
                 success: function (response) {
                     var msg = "";
-                    if (response == 1) {
-                        msg = "<div class='alert alert-success alert-dismissible fade show' role='alert'><strong>Sucess updating attendance</strong></div>";
-                        window.location = "student_report.html";
+                    console.log(response);
+                    if (response) {
+                        msg = "<div class='alert alert-success alert-dismissible fade show' role='alert'><strong>Sucess updating attendance"+response+"</strong></div>";
                     } else {
                         msg = "<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>No respsonse from the server</strong></div>";
                     }
@@ -167,5 +177,9 @@ $(document).ready(function () {
             $("#message-confirm").html(msg);
         }
     });
+
+ 
+
+
 
 });
