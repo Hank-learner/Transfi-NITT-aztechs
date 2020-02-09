@@ -7,31 +7,38 @@ const jwtCheck= require("./middleware.js");
 exports.updateproxy= functions.https.onRequest(async (req, res)=>{
 //   return jwtCheck(req, res, async ()=>{
      try {
-        const sub = req.body.sub;
-        const roll_no = req.body.roll_no;
-        const date = req.body.date;
-        let ref1 = await db.ref(`/Students/${roll_no}/${sub}`);
-        let exist=0;
-
-        let snap= await ref1.once(`value`);
-        let prof_no= await snap.child(`prof`).val();
-        let ref= await db.ref(`/Professors/${prof_no}/subjects/${sub}/${roll_no}/attended`)
-        let ref2 = await db.ref(`/Professors/${prof_no}/subjects/${sub}`)
-        let exist_snap= await ref2.once("value");
-        if(exist_snap.hasChild(`${roll_no}`)){
-        let snapshot = await ref.once("value");
-        let attended_array = snapshot.val();
-        attended_array.push(`${date}`);
-        await ref.update({
-            [`attended`] : attended_array
-        });
-        
-        res.status(200).send("updated successfully");
-        }
-        else
-        {
-            res.status(400).send("student hasn't enrolled for the subject");
-        }
+                let item = req.body.rollno;
+                let subject = req.body.subject;
+                let date = req.body.date;
+                let ref1 = await db.ref(`/Students/${item}/subjects/${subject}`);
+                let snap= await ref1.once(`value`);
+                let profid= await snap.child(`prof`).val();
+                
+  
+                        let ref = await db.ref(`/Professors/${profid}/subjects/${subject}/${item}`);
+                        snap = await ref.once("value");
+                        let per = snap.child(`percentage`).val();
+                        let total = snap.child(`total_classes`).val();
+                        per *= 0.01;
+                        per = ((per * total) + 1) / (total + 1);
+                        per *= 100;
+                        total = total + 1;
+                        
+                        await ref.update({
+                            [`percentage`]: per,
+                            [`total_classes`]: total
+                        });
+                        let ref2 = db.ref(`/Students/${item}/subjects/${subject}/attendance`);
+                        await ref2.update({
+                            [`${date}`]: 1
+                        });
+                        let ref3 = db.ref(`/Students/${item}/subjects/${subject}`);
+                        await ref3.update({
+                            percentage: per,
+                            total: total
+                        });
+            
+                res.status(200).send("updated");
      }
      catch(err){
         console.log(err)

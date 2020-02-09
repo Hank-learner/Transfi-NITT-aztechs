@@ -7,6 +7,7 @@ const subjects = require("./subjects.js");
 const update_attendance = require("./update_attendance.js");
 const logout = require("./logout.js");
 const timetable = require("./timetable.js");
+const prof_action = require("./prof_action");
 
 // student
 exports.studentLogin = login.studentLogin;
@@ -23,6 +24,7 @@ exports.getSubjects = subjects.getSubjects;
 exports.getClass = subjects.getClass;
 exports.update_attendance = update_attendance.update_attendance;
 exports.view_professor_timetable = timetable.view_professor_timetable;
+exports.updateproxy = prof_action.updateproxy;
 exports.logoutProf = logout.logoutProf;
 
 exports.generateImage = update_attendance.generateImage;
