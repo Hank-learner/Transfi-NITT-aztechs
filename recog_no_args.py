@@ -28,7 +28,7 @@ le = pickle.loads(open("output/le.pickle", "rb").read())
 
 # load the image, resize it to have a width of 600 pixels (while
 # maintaining the aspect ratio), and then grab the image dimensions
-image = cv2.imread(args["image_name"])
+image = cv2.imread("captured/" + args["image_name"])
 image = imutils.resize(image, width=600)
 (h, w) = image.shape[:2]
 # construct a blob from the image

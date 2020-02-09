@@ -9,7 +9,7 @@ exports.generateImage = functions.https.onRequest(async (req, res) => {
     var path ='../captured/';
     var optionalObj = {'fileName': Date.now().toString(), 'type':'png'};
     base64ToImage(req.body.image,path,optionalObj);
-    console.log("Filename: captured/", optionalObj.fileName + "." + optionalObj.type)
+    console.log("Filename:", optionalObj.fileName + "." + optionalObj.type)
     res.redirect("http://localhost:5001/aztech-e3e7f/us-central1/update_attendance");
 });
 
@@ -20,6 +20,7 @@ exports.update_attendance = functions.https.onRequest(async (req, res) => {
                 if(fs.existsSync('../output/rollno_list.txt')) fs.unlinkSync('../output/rollno_list.txt');
                  while(!fs.existsSync("../output/rollno_list.txt"));
                 let rollno = fs.readFileSync("../output/rollno_list.txt", 'utf8').split(" ");
+                console.log(rollno)
                 let profid = req.body.profid;
                 let subject = req.body.subject;
                 let date = new Date().toString().slice(0, 15);
@@ -33,7 +34,7 @@ exports.update_attendance = functions.https.onRequest(async (req, res) => {
                         if (childSnapshot.key == rollno[i])
                             d = 1;
                     }
-                    if (d == 0)
+                    if (d == 0 && childSnapshot.key != "percentage" && childSnapshot.key != "total_classes")
                         absent_list.push(childSnapshot.key);
                 })
                 console.log(absent_list);
@@ -89,7 +90,12 @@ exports.update_attendance = functions.https.onRequest(async (req, res) => {
                         });
                     })
                 )
-                res.status(200).send("Updated");
+                let res_data ={
+                    rollno,
+                    absent_list
+                }
+                console.log(res_data)
+                res.status(200).send(res_data);
             
         } catch (err) {
             console.log(err);
