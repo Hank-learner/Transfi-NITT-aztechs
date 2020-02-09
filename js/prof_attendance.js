@@ -157,13 +157,27 @@ $(document).ready(function () {
         console.log(base64string);
         if (username != "" && base64string != "" && selected_subject != "" ) {
             $.ajax({
-                url: 'http://localhost:5001/aztech-e3e7f/us-central1/update_attendance',
+                url: 'http://localhost:5001/aztech-e3e7f/us-central1/generateImage',
                 type: 'post',
                 data: { profid: username, image: base64string, subject:selected_subject },
                 success: function (response) {
                     var msg = "";
                     console.log(response);
                     if (response) {
+                        response.rollno.forEach((element)=>{
+                            var tr=document.createElement("tr");
+                            var td=document.createElement("td");
+                            td.innerText=element;
+                            tr.appendChild(td);
+                            $("#present-rolls").append(tr);
+                        });
+                        response.absent_list.forEach((element)=>{
+                            var tr=document.createElement("tr");
+                            var td=document.createElement("td");
+                            td.innerText=element;
+                            tr.appendChild(td);
+                            $("#absent-rolls").append(tr);
+                        });
                         msg = "<div class='alert alert-success alert-dismissible fade show' role='alert'><strong>Sucess updating attendance"+response+"</strong></div>";
                     } else {
                         msg = "<div  class='alert alert-danger alert-dismissible fade show' role='alert'><strong>No respsonse from the server</strong></div>";

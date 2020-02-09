@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/reports.css">
     <link rel="stylesheet" href="css/courses_list.css">
+    <script src="js/student_report.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -34,7 +35,7 @@
 	</nav>
 
 
-    <div class="page-content page-container" id="page-content">
+    <!-- <div class="page-content page-container" id="page-content">
     <div class="padding">
         <div class="row container d-flex justify-content-center">
             <div class="col-xl-12">
@@ -87,7 +88,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="page-content page-container" id="page-content">
         <div class="padding">
@@ -97,57 +98,8 @@
                         <div class="box-header with-border">
                             <h3 class="box-title">Your courses</h3>
                         </div>
-                        <div class="box-body">
-                            <table class="table table-bordered">
-                                <tbody>
-                                    <tr>
-                                        <th style="width: 100px">Course code</th>
-                                        <th>Work</th>
-                                        <th>Progress bar</th>
-                                        <th style="width: 40px">Attendance percent</th>
-                                    </tr>
-                                    <tr>
-                                        <td>CSPC 25</td>
-                                        <td>Install New Software</td>
-                                        <td>
-                                            <div class="progress progress-xs">
-                                                <div class="progress-bar progress-bar-yellow" style="width: 55%"></div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge bg-yellow">55%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>Upload new SQL file</td>
-                                        <td>
-                                            <div class="progress progress-xs">
-                                                <div class="progress-bar progress-bar-primary" style="width: 75%"></div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge bg-light-blue">75%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>Cron job running</td>
-                                        <td>
-                                            <div class="progress progress-xs progress-striped active">
-                                                <div class="progress-bar progress-bar-danger" style="width: 30%"></div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge bg-red">30%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>Fix and remove bugs</td>
-                                        <td>
-                                            <div class="progress progress-xs progress-striped active">
-                                                <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge bg-green">90%</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="box-body" id="progress_table">
+                            
                         </div>
                     </div>
                 </div>
