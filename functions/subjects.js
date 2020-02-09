@@ -32,7 +32,9 @@ exports.getClass = functions.https.onRequest(async (req, res) => {
             const snapshot = await ref.once("value");
             let arr = [];
             snapshot.forEach(childSnapShot => {
-                arr.push(childSnapShot.key);
+                //arr.push(childSnapShot.key);
+                let obj = {"rollno" : childSnapShot.key, "attendance" : childSnapShot.child("percentage").val()}
+                arr.push(obj);
             });
             res.status(200).json(arr);
         } catch(err) {
@@ -41,4 +43,3 @@ exports.getClass = functions.https.onRequest(async (req, res) => {
         }
     // })
 });
-
