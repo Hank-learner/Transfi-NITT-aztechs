@@ -154,7 +154,7 @@ $(document).ready(function () {
         console.log("reg");
         var username = localStorage.getItem("att_user_prof_roll");
         var base64string = $("#photo").attr("src");
-        console.log(base64string);
+        console.log(selected_subject, username);
         if (username != "" && base64string != "" && selected_subject != "" ) {
             $.ajax({
                 url: 'http://localhost:5001/aztech-e3e7f/us-central1/generateImage',

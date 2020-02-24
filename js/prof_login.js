@@ -11,6 +11,7 @@ $(document).ready(function () {
     $("#login-button").click(function(){
         console.log("reg");
         var username = $("#login-username").val().trim();
+        console.log(username)
         var password = $("#login-password").val().trim();
         if( username != "" && password != "" ){
             $.ajax({
